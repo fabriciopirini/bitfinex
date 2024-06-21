@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+import { OrderBook } from "@/app/components/OrderBook";
+import { WebsocketControls } from "@/app/components/WebsocketControls";
 
-export default function IndexPage() {
-  return <Counter />;
-}
+const Home = () => (
+  <main className="flex min-h-screen flex-col items-center gap-8 py-10 px-24">
+    <WebsocketControls />
+    <OrderBook />
+  </main>
+);
 
-export const metadata: Metadata = {
-  title: "Redux Toolkit",
-};
+export default Home;
